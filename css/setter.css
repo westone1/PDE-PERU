@@ -1,0 +1,42 @@
+*{
+    margin: 0;   
+    padding: 0;
+    box-sizing: border-box;  
+ }
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color: var(--backgroudColor);
+}
+p{
+    font-family: var(--textFont-primario);
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-family: var(--textFont-secundario);
+}
+button{
+    font-family: var(--textFont-primario);
+}
+ul, li {
+    padding: 0;
+}
+
+/*VARIABLES*/
+
+:root{
+    --backgroudColor:#fafbfa;
+    --textColoMenus:#03377a;
+    --textFont-primario:"Exo 2", sans-serif;
+    --textFont-secundario:"Rajdhani", sans-serif;
+    --blueColor:#101e2d
+
+   /*colors: 
+        backgroundColor:#fafbfa
+        lighRed: #d92104
+        darkBlueMarine: #101e2d
+        electricLightBlue: #03377a
+        electricUltraLightBlue: #0262ac
+   */
+}
