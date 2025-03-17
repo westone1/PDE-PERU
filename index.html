@@ -10,11 +10,15 @@
     <!--- CSS --->
     <link rel="stylesheet" href="./css/setter.css">
     <link rel="stylesheet" href="./css/header/header.css">
+    <link rel="stylesheet" href="./css/body/baner.css">
+    <link rel="stylesheet" href="./css/body/sevices.css">
+    <link rel="stylesheet" href="./css/body/contact.css">
+    <link rel="stylesheet" href="./css/footer/footer.css">
 
 </head>
 <body>
     <header>
-        <div class="headerMainBox">
+        <div id="inicio" class="headerMainBox">
             <div class="headerMainBox__infoContactBox">
                 <a href="" target="_blank">
                     <div>
@@ -30,22 +34,153 @@
                 </a>
             </div>
             <div class="headerMainBox__menuBox">
+                <i class="hamburgerMenu fa-solid fa-bars"></i>
                 <div class="headerMainBox__menuBox__logoContainer">
                     <img src="/img/PDE LOGO.png" alt="Servicios eléctricos - diagnósticos eléctricos Perú - logo">
                     <p>Pruebas y diagnósticos eléctricos Perú</p>
                 </div>
                 <div class="headerMainBox__menuBox__menuContainer">
                     <ul>
-                        <a href=""><li class="UnidadesNegocio">Unidades de negocio</li></a>
-                        <a href=""><li class="conocenos">Conócenos</li></a>
-                        <a href=""><li class="blog">Blog</li></a>
-                        <a href=""><li class="contacto">Contacto</li></a>
+                        <li class="UnidadesNegocio"><a href="">Servicios</a></li>
+                        <li class="conocenos"><a href="#conocenos">Conócenos</a></li>
+                        <li class="blog"><a href="">Blog</a></li>
+                        <li class="contacto"><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
+    <main>
+    <section class="banner-maincontainer">
+        <div class="banner-maincontainer__box" loading="lazy">
+            <div class="banner-maincontainer__box__descriptionBox">
+                <div class="banner-maincontainer__box__descriptionBox__infoCard">
+                    <h2>Mantenimiento de <br> Sub estaciones eléctricas</h2>
+                    <a href="#contacto">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+        <div id="conocenos" class="services-maincontainer__box">
+            <h2>Especialistas en pruebas eléctricas <br> y <br> mantenimiento preventivo</h2>
+            <div class="services-maincontainer__box__separator"></div>
+            <div class="services-maincontainer__box__servicesContainer">
+               <div  class="services-maincontainer__box__servicesContainer__serviceCard">
+                <i class="fa-solid fa-caret-right"></i>
+                <div  class="services-maincontainer__box__servicesContainer__serviceCard__description">
+                    <h3>Quienes somos?</h3>
+                    <p>En PDE Perú, somos especialistas en pruebas eléctricas y mantenimiento preventivo de equipos de patio en subestaciones de media y alta tensión. <br> Con años de experiencia en el sector eléctrico<br> ofrecemos soluciones integrales que garantizan la confiabilidad, seguridad y eficiencia de la infraestructura eléctrica de nuestros clientes.
+                </div>
+               </div>
+               <div class="services-maincontainer__box__servicesContainer__serviceCard services">
+                <i class="fa-solid fa-caret-right"></i>
+                <div class="services-maincontainer__box__servicesContainer__serviceCard__description">
+                    <h3>Nuestros servicios</h3>
+                    <p>En PDE Perú, ofrecemos: <br>
+                       ✅ Pruebas de operación de interruptores para verificar su espuesta ante maniobras eléctricas<br>
+                       ✅ Pruebas a relés de protección, asegurando su correcto desempeño ante fallas del sistema<br>
+                       ✅ Pruebas de aislamiento en bushings, asegurando la integridad dieléctrica del equipo<br>
+                       ✅ Pruebas de aislamiento a transformadores de corriente, tensión y potencia<br>
+                       ✅ Pruebas eléctricas a equipos secundarios de protección y control<br>
+                       ✅ Prueba de tiempos de operación<br>
+                </div>
+               </div>
 
+            </div>
+        </div>
+        <div class="form-maincontainer__box">
+            <div class="form-maincontainer__box__tittleBox">
+                <h3>Queremos trabajar contigo!<br><b>Contáctanos!</b></h3>
+                <img src="./img/PDE-LOGITPO.PNG" alt="">
+            </div>
+            <div id="contacto" class="form-maincontainer__box__tittleBox__formBox">
+                <form method="POST">
+                    <h2>Contacto</h2>
+                    <div class="form-maincontainer__box__tittleBox__formBox__inputsBox">
+                        <div class="inputTeam">
+                            <div>
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div>
+                                <label for="nombre">Apellidos:</label>
+                                <input type="text" id="apellidos" name="apellidos" required>
+                            </div>
+                        </div>    
+                        <div class="inputTeam">
+                            <div>
+                                <label for="nombre">Empresa:</label>
+                                <input type="text" id="empresa" name="empresa" required>
+                            </div>
+                            <div>
+                                <label for="nombre">Teléfono:</label>
+                                <input type="number" id="telefono" name="telefono" required>
+                            </div>   
+                        </div> 
+                        <div class="inputTeam">
+                            <div>
+                                <label for="nombre">RUC: </label>
+                                <input type="number" id="ruc" name="ruc" required>
+                            </div>
+                            <div>
+                                <label for="nombre">Dirección:</label>
+                                <input type="text" id="direccion" name="direccion" required>
+                            </div>
+                        </div>
+                        <div class="inputTeam">
+                            <div>
+                                <label for="correo">Correo:</label>
+                                <input type="email" name="correo" id="correo" required>
+                            </div>  
+                            <div>
+                                <label for="mensaje">Mensaje:</label>
+                                <textarea name="mensaje" id="mensaje" rows="2" cols="80" required style="resize: none; max-height: 200px;"></textarea>
+                            </div>
+                        </div>   
+                            
+                        </div> 
+                        <div class="formButton">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+   
+    </section>
+    </main>
+    <footer>
+        <div class="footerMainBox">
+            <div class="footerMainBox__container">
+                <div class="footerMainBox__infoBox">
+                    <a href="" target="_blank">
+                        <div>
+                            <i class="fa-solid fa-phone"></i>
+                            <p>Teléfono: 999999999</p>
+                        </div>
+                    </a>
+                    <a href="" target="_blank">
+                        <div>
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>Email: ejmplo123@gmail.com</p>
+                        </div>
+                    </a>
+            </div>
+            <div class="footerMainBox__menu">
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="">Servicios</a></li>
+                        <li><a href="#conocenos">Conócenos</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
 
+            </div>
+            </div>
+            <p>Copyright <span id="year"></span>. Todos los Derechos Reservados</p>
+        </div>
+  
+    </footer>
+    <script>
+         document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
