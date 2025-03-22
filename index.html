@@ -2,18 +2,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-32x32.png">
     <title>Inicio | PDE Perú</title>
     <script src="https://kit.fontawesome.com/039eba1dbc.js" crossorigin="anonymous"></script>
+    <script src="/js/toggleMenu.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!--- CSS --->
     <link rel="stylesheet" href="./css/setter.css">
-    <link rel="stylesheet" href="./css/header/header.css">
-    <link rel="stylesheet" href="./css/body/baner.css">
-    <link rel="stylesheet" href="./css/body/sevices.css">
-    <link rel="stylesheet" href="./css/body/contact.css">
-    <link rel="stylesheet" href="./css/footer/footer.css">
+    <link rel="stylesheet" href="./css/index/header/header.css">
+    <link rel="stylesheet" href="./css/index/body/baner.css">
+    <link rel="stylesheet" href="./css/index/body/sevices.css">
+    <link rel="stylesheet" href="./css/index/body/contact.css">
+    <link rel="stylesheet" href="./css/index/footer/footer.css">
+    <link rel="stylesheet" href="./css/index/body/whatsApp.css">
 
 </head>
 <body>
@@ -34,22 +37,30 @@
                 </a>
             </div>
             <div class="headerMainBox__menuBox">
-                <i class="hamburgerMenu fa-solid fa-bars"></i>
+                <i id="hamburgerMenu"class="hamburgerMenu fa-solid fa-bars"></i>
                 <div class="headerMainBox__menuBox__logoContainer">
                     <img src="./img/PDE-LOGITPO.PNG" alt="Servicios eléctricos - diagnósticos eléctricos Perú - logo">
                 </div>
                 <div class="headerMainBox__menuBox__menuContainer">
-                    <ul>
-                        <li class="UnidadesNegocio"><a href="">Servicios</a></li>
-                        <li class="conocenos"><a href="#conocenos">Conócenos</a></li>
-                        <li class="blog"><a href="">Blog</a></li>
-                        <li class="contacto"><a href="#contacto">Contacto</a></li>
-                    </ul>
+                    <nav>
+                        <ul>
+                            <li><a href="./servicios.html">Servicios</a></li>
+                            <li><a href="#conocenos">Conócenos</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
+            <div id="toggleMenuMainContainer" class="toggleMenuMainContainer">
         </div>
     </header>
     <main>
+    <div class="whatsAppButton">
+            <a href="https://wa.me/51999999999" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+    </div>
     <section class="banner-maincontainer">
         <div class="banner-maincontainer__box" loading="lazy">
             <div class="banner-maincontainer__box__descriptionBox">
@@ -59,6 +70,8 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section class="services-maincontainer">
         <div id="conocenos" class="services-maincontainer__box">
             <h2>Especialistas en pruebas eléctricas <br> y <br> mantenimiento preventivo</h2>
             <div class="services-maincontainer__box__separator"></div>
@@ -83,9 +96,10 @@
                        ✅ Prueba de tiempos de operación<br>
                 </div>
                </div>
-
             </div>
         </div>
+    </section>
+    <section class="form-maincontainer">
         <div class="form-maincontainer__box">
             <div class="form-maincontainer__box__tittleBox">
                 <h3>Queremos trabajar contigo!<br><b>Contáctanos!</b></h3>
@@ -144,7 +158,6 @@
                 </form>
             </div>
         </div>
-   
     </section>
     </main>
     <footer>
@@ -165,13 +178,14 @@
                     </a>
             </div>
             <div class="footerMainBox__menu">
+                <nav>
                     <ul>
                         <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="">Servicios</a></li>
+                        <li><a href="./servicios.html">Servicios</a></li>
                         <li><a href="#conocenos">Conócenos</a></li>
-                        <li><a href="">Blog</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
                     </ul>
-
+                </nav>
             </div>
             </div>
             <p>Copyright <span id="year"></span>. Todos los Derechos Reservados</p>

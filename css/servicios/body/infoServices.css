@@ -1,0 +1,104 @@
+.infoServices-maincontainer__cardsBox{
+    padding: 2.5rem;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+.infoServices-maincontainer__cardsBox__card{
+    display: flex;
+    border-radius: 5px;
+    width: 80%;
+    height: 350px;
+    background-color: var(--textColoMenus);
+    transition: all 0.3s ease-in-out;
+}
+.infoServices-maincontainer__cardsBox__card:hover{
+    transform: scale(1.05);
+    -webkit-box-shadow: 6px 11px 20px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 11px 20px 0px rgba(0,0,0,0.75);
+    box-shadow: 6px 11px 20px 0px rgba(0,0,0,0.75);
+}
+.infoServices-maincontainer__cardsBox__card__imageBox{
+   width: 30%;
+   height: auto;
+}
+.infoServices-maincontainer__cardsBox__card__imageBox>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.infoServices-maincontainer__cardsBox__card__separator{
+    content: '';
+    position: relative;
+    top: 51px;
+    right: 8px;
+    width: 51px;
+    height: 92.1%;
+    background-color: var(--textColoMenus);
+    transform: rotate(22deg);
+    transform-origin: top right;
+    border-right: 135px solid var(--textColoMenus);
+}
+
+.infoServices-maincontainer__cardsBox__card__descriptionBox{
+    padding: 2rem 1rem 2rem 0rem;
+    width: 70%;
+}
+.infoServices-maincontainer__cardsBox__card__descriptionBox h3{
+    font-size: 30px;
+    color: white;
+}
+.infoServices-maincontainer__cardsBox__card__descriptionBox p{
+    font-size: 20px;
+    color: white;
+}
+
+@media (max-width:1024px){
+    .infoServices-maincontainer__cardsBox__card{
+        height: 650px;
+    }
+    .infoServices-maincontainer__cardsBox__card__descriptionBox{
+        width: 100%;
+    }
+    .infoServices-maincontainer__cardsBox__card__separator{
+        display: none;
+    }
+}
+
+@media (max-width:768px){
+    .infoServices-maincontainer__cardsBox__card{
+        height: 650px;
+        width: 100%;
+        padding:1rem 1rem 1rem 1rem;
+        text-align: center;
+    }
+    .infoServices-maincontainer__cardsBox__card__imageBox{
+        display: none;
+    }
+    .infoServices-maincontainer__cardsBox__card__separator{
+        display: none;
+    }
+    .infoServices-maincontainer__cardsBox__card__descriptionBox{
+        width: 100%;
+    }
+
+    
+}
+@media (max-width:320px){
+    .banner-maincontainer__box{
+        background-position: top;
+    }
+    .infoServices-maincontainer__cardsBox__card{
+        height: 1150px;
+    }
+    .infoServices-maincontainer__cardsBox__card:hover{
+        transform: scale(1);
+        -webkit-box-shadow: 6px 11px 20px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 6px 11px 20px 0px rgba(0,0,0,0.75);
+        box-shadow: 6px 11px 20px 0px rgba(0,0,0,0.75);
+    }
+
+
+    
+}
