@@ -86,13 +86,12 @@
     display: none;
 }
 .toggleMenuMainDiv{
+    display: none;
     background-color: var(--blueColor);
     margin-top: 25px;
-    display: none;
     width: 100%;
     height: 200px;
     display: block;
-
     opacity: 0;
     transform: translateY(-20px);
     animation: showMenu 0.3s ease-out forwards;
@@ -104,7 +103,6 @@
     bottom: 645px;
     left: 454px;
     cursor: pointer;
-
 }
 .toggleMenuMainDiv>nav>ul{
     display: flex;
@@ -144,8 +142,6 @@
     }
     
 }
-
-
 
 @media (max-width: 1024px) {
     .toggleMenuMainContainer{
