@@ -22,14 +22,13 @@ function createNavBar(){
     const ul = document.createElement('ul');
 
     const currentPage = window.location.pathname.split("/").pop();
-
     if(currentPage == "index.html"){
         const liBlog = document.createElement('li');
         const aBlog = document.createElement('a');
-        aServicios.textContent = "Servicios";
-        aServicios.href = "./servicios.html";
         const liServicos = document.createElement('li');
         const aServicios = document.createElement('a');
+        aServicios.textContent = "Servicios";
+        aServicios.href = "./servicios.html";
         aBlog.textContent = "Blog";
         aBlog.href = "./blog.html";
         liServicos.appendChild(aServicios);
