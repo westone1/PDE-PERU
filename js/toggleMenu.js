@@ -2,8 +2,6 @@
 const hamburger = document.getElementById('hamburgerMenu');
 const toggleMenuMainContainer = document.getElementById('toggleMenuMainContainer');
 
-
-
 hamburger.addEventListener("click", ()=>{ 
     hamburger.style.display = "none";
     const mainDiv = createMainDiv();
@@ -21,71 +19,40 @@ function createNavBar(){
     nav.classList.add('toggleMenuNav');
     const ul = document.createElement('ul');
 
-    const currentPage = window.location.pathname.split("/").pop();
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    
     if(currentPage == "index.html"){
-        const liBlog = document.createElement('li');
-        const aBlog = document.createElement('a');
-        aBlog.textContent = "Blog";
-        aBlog.href = "./blog.html";
-        const liServicos = document.createElement('li');
-        const aServicios = document.createElement('a');
-        aServicios.textContent = "Servicios";
-        aServicios.href = "./servicios.html";
+        agregarElemento(ul,"Servicios","./servicios.html");
+        agregarElemento(ul,"Blog","./blog.html");
         
-        liServicos.appendChild(aServicios);
-        ul.appendChild(liServicos)
         
-        liBlog.appendChild(aBlog);
-        ul.appendChild(liBlog)
     }
     if(currentPage == "servicios.html"){
-        const liInicio = document.createElement('li');
-        const aInicio = document.createElement('a');
-        aInicio.textContent = "Inicio";
-        aInicio.href = "./index.html";
-        const liBlog = document.createElement('li');
-        const aBlog = document.createElement('a');
-        aBlog.textContent = "Blog";
-        aBlog.href = "./blog.html";
-        liInicio.appendChild(aInicio);
-        ul.appendChild(liInicio);
-        liBlog.appendChild(aBlog);
-        ul.appendChild(liBlog)
-    }
-    if(currentPage == "blog.html"){
-        const liInicio = document.createElement('li');
-        const aInicio = document.createElement('a');
-        aInicio.textContent = "Inicio";
-        aInicio.href = "./index.html";
-        const liServicos = document.createElement('li');
-        const aServicios = document.createElement('a');
-        aServicios.textContent = "Servicios";
-        aServicios.href = "./servicios.html";
-        liInicio.appendChild(aInicio);
-        ul.appendChild(liInicio);
-        liServicos.appendChild(aServicios);
-        ul.appendChild(liServicos)
+        agregarElemento(ul,"Inicio","./index.html");
+        agregarElemento(ul,"Blog","./blog.html");
+
         
     }
-   
-    const aContacto = document.createElement('a');
-    const aConocenos = document.createElement('a');
-    
-    const liContacto = document.createElement('li');
-    const liConocenos = document.createElement('li');
-         
-    aContacto.textContent = "Contacto";
-    aConocenos.textContent = "Conócenos";      
-    aContacto.href = "#contacto";
-    aConocenos.href = "#conocenos";
+    if(currentPage == "blog.html"){
+        agregarElemento(ul,"Inicio","./index.html");
+        agregarElemento(ul,"Servicios","./servicios.html");
 
-    liContacto.appendChild(aContacto);
-    liConocenos.appendChild(aConocenos);
-   
-    ul.appendChild(liContacto);
-    ul.appendChild(liConocenos);
-
-    nav.appendChild(ul);
-    return nav
-    
+    }
+        agregarElemento(ul,"Contacto","#contacto");
+        agregarElemento(ul,"Conócenos","#conocenos");
+        
+        nav.appendChild(ul);
+        return nav
 }
+
+function agregarElemento(ul,texto,href){
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.textContent = texto;
+    a.href = href;
+    li.appendChild(a);
+    ul.appendChild(li);
+}
+
+   
+
